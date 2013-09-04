@@ -11,6 +11,10 @@ h7 {
   color: orange;
 }
 
+ul{
+  list-style: none;
+}
+
 /*Table*/
 th, tfoot > tr {
   color: #4D5A63;
@@ -114,6 +118,14 @@ footer {
 
 #rightContent {
   width: 15%;
+  font-size: 13px;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 50px;
+  text-align: right;
+  top: 105px;
 }
 
 .left-sub-content, .middle-sub-content, .middle-sub-content-small, .right-sub-content {

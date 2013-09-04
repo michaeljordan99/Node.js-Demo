@@ -188,3 +188,7 @@ function show3(){
     $('#popover4').popover('show');
     return false;
 }
+
+function goTo(control){
+    $('html, body').animate({scrollTop: $(control).position().top - 100 }, 'slow');
+}
