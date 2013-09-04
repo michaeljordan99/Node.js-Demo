@@ -3,8 +3,30 @@ body {
   font: 400 14px/1.6"Open Sans", sans-serif;
 }
 
+h4, h5 {
+  color: #4A565E !important;
+}
+
+h7 {
+  color: orange;
+}
+
+/*Table*/
+th, tfoot > tr {
+  color: #4D5A63;
+}
+
 a:hover {
   text-decoration: none !important;
+}
+
+select {
+  vertical-align: top !important;
+  margin: 0 10px 0 10px !important;
+}
+
+option {
+  padding: 5px;
 }
 
 #container {
@@ -25,7 +47,7 @@ header {
 }
 
 #headerWrapper {
-  margin: 0 0 0 130px;
+  margin: 10px 0 0 130px;
   width: 75%;
 }
 
@@ -70,14 +92,14 @@ footer {
 }
 
 #contentWrapper {
-  margin: 50px 0 0 100px;
+  margin: 40px 0 0 100px;
   padding-left: 10px;
   min-height: 1450px;
   width: 91%;
   color: #7D7E80;
 }
 
-.left-sub-content, .middle-sub-content, .right-sub-content{
+.left-sub-content, .middle-sub-content, .middle-sub-content-small, .right-sub-content{
   padding: 25px;
   margin: 25px;
 }
@@ -94,13 +116,45 @@ footer {
   width: 15%;
 }
 
-.left-sub-content, .middle-sub-content, .right-sub-content {
+.left-sub-content, .middle-sub-content, .middle-sub-content-small, .right-sub-content {
   border: 1px solid #CCCDCF;
 }
 
+.middle-sub-content, .middle-sub-content-small {
+  background-color: white;
+  box-shadow: 5px 5px 2px #A6A2A2;
+  border-radius: 3px;
+}
+
+.middle-sub-content {
+  height: 750px;
+}
+
+.middle-sub-content-small {
+  height: 150px;
+}
+
+.middle-sub-sub-content-small, .middle-sub-sub-content {
+  border: 1px dotted #CACACC;
+  color: #88888A;
+  margin: 30px 0 10px 0;
+  padding: 20px;
+  height: 80%;
+}
+
+.middle-sub-sub-content {
+  height: 85%;
+}
+
+.middle-sub-sub-content-small {
+  height: 30%;
+}
+
 #middleContent {
-  width: 50%;
+  margin: 30px 0 20px 0;
+  width: 85%;
   min-height: 750px;
+  background-color: #E6E6E8;
 }
 
 .bottom-header {
@@ -122,11 +176,6 @@ footer {
     text-align: center;
 }
 
-table th {
-  background-color: #C2C3C4;
-  color: white;
-}
-
 #top {
   background: none repeat scroll 0 0 black;
   padding: 8px;
@@ -142,6 +191,11 @@ table th {
 }
 
 /* Popovers */
+.popover {
+  max-width: 600px !important;
+  width: auto !important;
+}
+
 #popoverInnerContent {
   font-size: x-small;
   color: gray;
@@ -153,4 +207,62 @@ table th {
 #popoverFooter {
   width: 100%;
   text-align: right;
+}
+
+.popover-button {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*Cart*/
+th.items {
+  width: 100px;
+}
+
+th.description {
+  width: 700px;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.input-tiny {
+  width: 20px;
+}
+
+/*Code*/
+.code-description-inner, .code-example-inner {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #C8CBCC;
+  height:160px;
+  border-radius: 5px;
+}
+
+.code-description {
+  float: left;
+  width:35%;
+}
+
+.code-example {
+  float: right;
+  width: 60%;
+}
+
+.code-example-inner {
+  background: none repeat scroll 0 0 #F8F8F8;
+  overflow-x: auto;
+}
+
+.snippet {
+  color: #2E363B;
+}
+
+.s1 {
+  margin: 0 0 0 50px;
+}
+
+.s2 {
+  margin: 0 0 0 100px;
 }

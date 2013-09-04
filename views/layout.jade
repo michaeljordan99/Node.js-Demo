@@ -14,76 +14,119 @@ html(ng-app)
 			header
 				#headerWrapper
 					strong
-						[Header Icon]	
+						img(src='http://www.chargeitpro.com/_media/chargeitpro_logo.gif')
 					#headerInnerRight
 						span.nav-button.separator
-							a(href='/')
-								i.icon-home
-						span.nav-button.separator	
-							a#popover1.popover-button(href='#', title='',data-placement='bottom', data-toggle='popover')
+							a#popoverAdmin.popover-button(href='#', onclick='return false;', title='',data-placement='bottom', data-toggle='popover')
 								i.icon-cog
 						span.nav-button
-							a(href='/users') 
-								i.icon-user	
+							a#popoverCart.popover-button(href='#', onclick='return false;', title='',data-placement='bottom', data-toggle='popover')
+								i.icon-shopping-cart		
 						span.nav-button
 							input#search(name="search",type="text").input-medium
 							a(href='#')
 								|&nbsp;&nbsp;
 								i.icon-search
-						#login!= partial('session/user')
 			#contentWrapper
 				#leftContent 
-					.left-sub-content
-						"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-						anim id est laborum."
-
-					.left-sub-content
-						"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-						anim id est laborum."
 				#middleContent
-					.middle-sub-content!= body
+					.middle-sub-content-small
+						a#popover0.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
+							[Category]
+						.middle-sub-sub-content-small
+							|Please select your type of business:
+							select(name='category')
+								option(value='', selected='true') -- Category --
+								option(value='Commercial Business') Commercial Business
+								option(value='Business to Business') Business to Business
+							button#startTour.btn.btn-primary Start Tour
 					.middle-sub-content
-						ul.nav.nav-tabs(id='myTab')
-							li.active
-								a(href='#tab1',data-toggle='tab') Lorem
-							li
-								a(href='#tab2',data-toggle='tab') Ipsum
-						#myTabContent.tab-content
-							#tab1.tab-pane.fade.active.in
-								p
-									"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut 
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris 
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure in reprehenderit in voluptate 
-									velit esse cillum dolore eu fugiat nulla pariatur. sint occaecat cupidatat non proident, 
-									sunt in culpa qui officia deserunt mollit id est laborum."
-							#tab2.tab-pane.fade
-								p
-									"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut 
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris 
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure in reprehenderit in voluptate 
-									velit esse cillum dolore eu fugiat nulla pariatur. sint occaecat cupidatat non proident, 
-									sunt in culpa qui officia deserunt mollit id est laborum."
-								p
-									"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut 
-									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris 
-									nisi ut aliquip ex ea commodo consequat. Duis aute irure in reprehenderit in voluptate 
-									velit esse cillum dolore eu fugiat nulla pariatur. sint occaecat cupidatat non proident, 
-									sunt in culpa qui officia deserunt mollit id est laborum."	
+						a#popover1.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
+							[Prerequisites]
+						.middle-sub-sub-content
+							[Sub Content 1]
+					.middle-sub-content
+						a#popover2.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
+							|How to Setup Workstations
+						.middle-sub-sub-content
+							[Example Setup Screen Goes Here]
+					.middle-sub-content
+						a#popover3.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
+							|How to Process Payments
+						.middle-sub-sub-content
+							h4 Your Shopping Cart	
+							table.table.table-striped.table-hover
+								thead
+									th.items Items
+									th.description
+									th.align-right Quantity
+									th.align-right Price
+								tr
+									td 
+										img(src='http://ecx.images-amazon.com/images/I/51dT6WsSvuL._SL500_PIsitb-sticker-arrow-big,TopRight,35,-73_OU01_SS100_.jpg')
+									td.description 
+										h5 Restful Web Services, 
+											span(style='font-weight: normal;') Joe Author
+										h7 In stock on September 6, 2013 
+										p "Every developer working with the Web needs to read this book." -- David Heinemeier Hansson, creator of the Rails framework
+									td.align-right 
+										input(type="text", value='1').input-tiny
+									td.align-right $24.99
+								tr
+									td 
+										img(src='http://ecx.images-amazon.com/images/I/51ZEACyjLtL._SL500_PIsitb-sticker-arrow-big,TopRight,35,-73_OU01_SS100_.jpg')
+									td.description
+										h5 MongoDB: The Definitive Guide, 
+											span(style='font-weight: normal;') Joe Author
+										p Manage the huMONGOus amount of data collected through your web application with MongoDB.  
+											This authoritative introduction—written by a core contributor to the project—shows you the many advantages of using document-oriented databases,
+									td.align-right 
+										input(type="text", value='1').input-tiny
+									td.align-right $74.98		
+								tfoot
+									tr(style='font-weight:bold;')
+										td.align-right(colspan='3') Total
+										td.align-right $74.98
+							#checkout(style='text-align: right;padding: 0 10px 0 0;') 
+								button#pay.btn.btn-primary Pay
+							#paymentCode
+								.code-description 
+									h5 Description
+									.code-description-inner
+										|To use Easy Integrator to process a payment transaction, create a JSON object 
+										and pass it into EasyIntegrator.processTransaction.
+								.code-example 
+									h5 Code Example
+									.code-example-inner
+										|//Create JSON object to pass to EasyIntegrator.
+										.snippet
+											|var request = {
+											.s1 "merchantName": "...",
+											.s1 "merchantKey": "...",
+											.s1 "configurationId": "...",
+											.s1 "transactionType": "CreditSale",
+											.s1 "transFields": { 
+											.s2 "amountTotal": "74.98" 
+											.s1 }
+											|}
+										br
+										|//Pass request JSON object to the EasyIntegrator processTransaction method.
+										.snippet
+											|EasyIntegrator.processTransaction(request)	
+											.s1 .success(function (resultsFields) {	
+											.s2 var transactionId = resultsFields.uniqueTransId;
+											.s1 })
+											.s1 .error(function (errorMessage) {
+											.s2 alert(errorMessage);
+											.s1 })
+											.s1 .done(function () {
+											.s1 });
+					.middle-sub-content
+						a#popover4.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
+							|How to Manage Customer Payment Options
+						.middle-sub-sub-content
+							[Example Customer Management Interface goes here]							
 				#rightContent
-					.right-sub-content
-						"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat 
 			a#top.hidden(href='')
 				i.icon-arrow-up.icon-white
 		footer 

@@ -15,11 +15,6 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('my secret string'));
-  app.use(express.session({
-    secret: 'my secret string',
-    maxAge: 3600000
-  }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -34,10 +29,7 @@ app.configure('production', function(){
 
 // Routes
 
-//app.get('/', routes.index);
 require('./routes/index')(app);
-require('./routes/users')(app);
-require('./routes/session')(app);
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
