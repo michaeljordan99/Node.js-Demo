@@ -2,6 +2,9 @@
 
 $(function () {
 
+    $("#processTransaction").html("Process Transaction").removeAttr("disabled");
+    $("#loader").addClass("hidden");
+
     $(window).scroll(function (eventData) {
 
         var pos = $(document).scrollTop();
@@ -29,6 +32,9 @@ $(function () {
 
     $("#processTransaction").on("click", function () {
 
+        $("#processTransaction").html("Processing").attr("disabled", "disabled");
+        $("#loader").removeClass("hidden");
+
         var request = {
             "merchantName": "TestUser1",
             "merchantKey": "842e1b378d0d41be97d05bfa9b014ee9",
@@ -49,7 +55,8 @@ $(function () {
                 alert(errorMessage);
             })
             .done(function () {
-
+                $("#processTransaction").html("Process Transaction").removeAttr("disabled");
+                $("#loader").addClass("hidden");
             });
     });
 });
