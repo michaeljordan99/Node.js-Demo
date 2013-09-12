@@ -45,7 +45,8 @@ $(function () {
 
         EasyIntegrator.processTransaction(request)
             .success(function (resultsFields) {
-                alert(resultsFields.UniqueTransId);
+                alert(resultsFields.uniqueTransId);
+                $("#receipt").modal();
             })
             .error(function (errorMessage) {
                 alert(errorMessage);

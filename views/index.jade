@@ -96,6 +96,69 @@
 		.sub-content
 			|[Example Customer Admin Screen Goes Here]
 
+		#receipt(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 425px;')
+			.modal-header(style='height:30px;')
+				button(type='button', class='close', data-dismiss='modal') X
+				b Receipt
+			.modal-body
+				#receiptInner(style='border:1px solid gray;padding:10px;margin-bottom:10px;width:90%;')
+					span(style='font-weight:bold;color:#5C5C5E;') Acme Merchantile
+					br
+					|101 Some Street
+					br
+					|Anytown, US 91234
+					br
+					|(888) 555-5555
+					br
+					span(style='font-size: 11px;') September 12, 2013 12:45 pm
+					br
+					br
+					|Ref #:	4180caf235bf4684a4e880a28225178b
+					br
+					|Cashier: John
+					br
+					|Reg #: 005
+					table(style='margin-top: 20px;width: 100%;')
+						tr
+							td Restful Web Services
+							td(style='text-align: right;') $24.99
+						tr
+							td MongoDB: The Definitive Guide
+							td(style='text-align: right;') $74.98
+						tr
+							td(style='text-align: right;padding-top: 15px;') SubTotal
+							td(style='text-align: right;padding-top: 15px;') $99.98
+						tr
+							td(style='text-align: right;') Sales Tax (8%)
+							td(style='text-align: right;') $7.99
+						tr
+							td(style='text-align: right;font-weight:bold;') Total
+							td(style='text-align: right;font-weight:bold;') $107.97
+						tr
+							td(style='padding-top: 15px;') Credit Sale ****9016
+							td(style='text-align: right;padding-top: 15px;') $20.00
+						tr
+							td Auth Code 012345
+							td
+						tr
+							td(style='text-align: right;') Cash
+							td(style='text-align: right;') $100.00
+						tr
+							td(style='text-align: right;') Change Due
+							td(style='text-align: right;') $0.00
+					div(style='text-align:center;margin:20px 0 20px 0;')
+						|I Agree to pay the above 
+						br
+						|total amount according 
+						br
+						|to card issuer agreement
+					div(style='border-bottom:1px solid black;width:80%;margin:0 auto;text-align:left;')
+						div(style='position:relative;top:20px;')
+							img(id='signature',src='',alt='',style='width:200px;padding:0 0 0 20px;')
+							div(style='position:relative;top:-20px') X
+					div(style='text-align:center;margin:20px 0 20px 0;').
+						No refunds after 30 days
+
 #rightContent
 	ul
 		li 
