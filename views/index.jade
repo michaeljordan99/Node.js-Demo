@@ -1,29 +1,31 @@
 #middleContent
-	.middle-sub-content-small
-		a#popover0.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
-			[Category]
-		.middle-sub-sub-content-small
-			|Please select your type of business:
-			select(name='category')
-				option(value='', selected='true') -- Category --
-				option(value='Commercial Business') Commercial Business
-				option(value='Business to Business') Business to Business
-			button#startTour.btn.btn-primary Start Tour
-	.middle-sub-content
-		a#popover1.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
-			[Prerequisites]
-		.middle-sub-sub-content
-			[Sub Content 1]
-	.middle-sub-content
-		a#popover2.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
-			|How to Setup Workstations
-		.middle-sub-sub-content
-			[Example Setup Screen Goes Here]
-	.middle-sub-content
-		a#popover3.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
-			|How to Process Payments
-		.middle-sub-sub-content
-			h4 Your Shopping Cart	
+	.content
+		h4 Introducting EasyIntegrator ChargeItProWeb API
+		.sub-content
+			|Payment Processing Partners, Inc. is offering a Web Based Point of Sale solution that allows 
+			|devlopers to easily integrate Point Of Sale hardware into their new or existing Web Based solutions. 
+			br
+			br
+			|The solution exists of 2 parts, a Windows Client Application that allows your Web Based POS to
+			|communicate with locally configured hardware and a JavaScript API that you integrate into your 
+			|custom developed Web POS.
+			br
+			|[Intro Language]
+		h4(id='prerequisites') Prerequisites
+		.sub-content
+			|To get started using Easy Integrator.
+			br
+			br
+			a(href='https://ppppublic.blob.core.windows.net/webpos/ChargeItProWebPOS.zip') Download 
+			|and install our Windows Client.
+			br
+			br
+			|Our Windows Client Software allows your Web Site to communicate with Hardware Devices to capture payment information and signatures. 
+		h4(id='setup') How To Setup Workstations
+		.sub-content
+			|[Example Setup Screen Goes Here]
+		h4(id='payments') How To Process Payments
+			h6(style='margin-left:5px;') Your Shopping Cart	
 			table.table.table-striped.table-hover
 				thead
 					th.items Items
@@ -57,8 +59,8 @@
 						td.align-right(colspan='3') Total
 						td.align-right $74.98
 			#checkout(style='text-align: right;padding: 0 10px 0 0;') 
-				button#pay.btn.btn-primary Pay
-			#paymentCode
+				button#processTransaction.btn.btn-primary Process Transaction
+			.code-container
 				.code-description 
 					h5 Description
 					.code-description-inner
@@ -89,20 +91,19 @@
 							.s2 alert(errorMessage);
 							.s1 })
 							.s1 .done(function () {
-							.s1 });
-	.middle-sub-content
-		a#popover4.popover-button(href='#', onclick='return false;', title='',data-placement='right', data-toggle='popover')
-			|How to Manage Customer Payment Options
-		.middle-sub-sub-content
-			[Example Customer Management Interface goes here]							
+							.s1 });		
+		h4(id='customers') Customer Transactions
+		.sub-content
+			|[Example Customer Admin Screen Goes Here]
+
 #rightContent
 	ul
 		li 
-			a(onclick='goTo($("#popover1"));') Prerequisites
+			a(onclick='goTo($("#prerequisites"));') Prerequisites
 		li 
-			a(onclick='goTo($("#popover2"));') Setup	
+			a(onclick='goTo($("#setup"));') Setup	
 		li 
-			a(onclick='goTo($("#popover3"));') Payments
+			a(onclick='goTo($("#payments"));') Payments
 		li 
-			a(onclick='goTo($("#popover4"));') Customers							
+			a(onclick='goTo($("#customers"));') Customers							
 
