@@ -41,7 +41,8 @@ $(function () {
 
         EasyIntegrator.processTransaction(request)
             .success(function (resultsFields) {
-                alert(resultsFields.uniqueTransId);
+                $("#uniqueTransId").html(resultsFields.uniqueTransId);
+                $("#signature").attr("src", resultsFields.signatureURL);
                 $("#receipt").modal();
             })
             .error(function (errorMessage) {
