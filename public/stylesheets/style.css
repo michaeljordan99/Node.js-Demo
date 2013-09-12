@@ -20,6 +20,10 @@ th, tfoot > tr {
   color: #4D5A63;
 }
 
+a {
+  cursor:pointer;
+}
+
 a:hover {
   text-decoration: none !important;
 }

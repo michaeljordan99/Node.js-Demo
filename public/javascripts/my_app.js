@@ -27,10 +27,6 @@ $(function () {
         $('html, body').animate({scrollTop:0}, 'slow');
     });
 
-    function goTo(control){
-        $('html, body').animate({scrollTop: $(control).position().top - 50 }, 'slow');
-    }
-
     $("#processTransaction").on("click", function () {
 
         var request = {
@@ -56,3 +52,7 @@ $(function () {
             });
     });
 });
+
+function goTo(control){
+    $('html, body').animate({scrollTop: $(control).position().top - 50 }, 'slow');
+}
