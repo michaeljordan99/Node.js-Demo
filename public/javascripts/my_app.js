@@ -5,6 +5,8 @@ $(function () {
     $("#processTransaction").html("Process Transaction").removeAttr("disabled");
     $("#loader").addClass("hidden");
 
+    $("#tooltip").tooltip();
+
     $(window).scroll(function (eventData) {
 
         var pos = $(document).scrollTop();

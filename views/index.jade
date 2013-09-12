@@ -97,7 +97,25 @@
 							.s1 });		
 		h4(id='customers') Customer Transactions
 		.sub-content
-			|[Example Customer Admin Screen Goes Here]
+			table.table
+				thead
+					th(style='width:200px;') First Name
+					th(style='width:200px;') LastName
+					th
+				tr
+					td Joe
+					td Smith 
+					td!= partial('customer_actions')
+				tr
+					td Mary
+					td Johnson 
+					td!= partial('customer_actions')					
+				tfoot
+					td 
+						a(id='tooltip',data-original-title='Add Customer',href='',onclick='return false;') 
+							i(class='icon-plus')
+					td
+					td
 
 		#receipt(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 425px;')
 			.modal-header(style='height:30px;')
