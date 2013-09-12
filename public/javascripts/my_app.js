@@ -57,6 +57,11 @@ $(function () {
                 $("#loader").addClass("hidden");
             });
     });
+
+    $("#addCustomerButton").on("click", function () {
+        $("#addCustomer").modal();
+    });
+
 });
 
 function goToTop(control){
