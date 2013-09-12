@@ -26,10 +26,6 @@ $(function () {
         }
     });
 
-    $("#top").on("click", function(){
-        $('html, body').animate({scrollTop:0}, 'slow');
-    });
-
     $("#processTransaction").on("click", function () {
 
         $("#processTransaction").html("Processing").attr("disabled", "disabled");
@@ -60,6 +56,10 @@ $(function () {
             });
     });
 });
+
+function goToTop(control){
+    $('html, body').animate({scrollTop:0}, 'slow');
+}
 
 function goTo(control){
     $('html, body').animate({scrollTop: $(control).position().top - 50 }, 'slow');

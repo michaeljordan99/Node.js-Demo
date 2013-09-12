@@ -18,18 +18,23 @@ html(ng-app)
 					#headerInnerRight
 
 			#contentWrapper!= body													
-			a#top.hidden(href='')
+			a#top.hidden(onclick='goToTop();')
 				i.icon-arrow-up.icon-white
 		footer 
 			.sub-footer
-				a.footer-link(href='#') [Footer Link]
-				a.footer-link(href='#') [Footer Link]
+				a.footer-link(href='http://www.chargeitpro.com/', target='_new') ChargeItPro.com	
+				a.footer-link(href='http://pppinc.github.io/ChargeItProWeb/', target='_new') EasyIntegrator WebAPI Documentation
 			.gradient-line
 			.sub-footer
-				a.footer-link(href='#') [Footer Link]
-			div
-				span#copyright.footer-link 
-					a(href='#') Terms of Use - 
-					a(href='#') Privacy Policy 
-					br
-					&nbsp;&nbsp;&copy; My Company, Inc. All Rights Reserved
+			div#copyright
+				|Copyright &copy 2012 Payment Processing Partners, Inc. All rights reserved.
+				br
+				|ChargeItPro and ChargeItPro EasyIntegrator are trademarks of Payment Processing Partners, Inc. Other trademarks, service marks, trade names, 
+				br
+				|and company logos referenced are the property of their respective owners. Payment Processing Partners, Inc. is a registered ISO/MSP of Wells Fargo 
+				br
+				|Bank, N.A., Walnut Creek, CA. American Express requires separate approval.
+				br
+				a(href='http://www.chargeitpro.com/terms.html', target='_new') Terms & Conditions&nbsp;|&nbsp;
+				a(href='http://www.chargeitpro.com/privacy.html', target='_new') Privacy & Security 
+				br
