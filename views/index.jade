@@ -97,25 +97,39 @@
 							.s1 });		
 		h4(id='customers') Customer Transactions
 		.sub-content
-			table.table
+			table.table.table-hover
 				thead
-					th(style='width:200px;') First Name
-					th(style='width:200px;') LastName
-					th
+					th(style='width:150px;') First Name
+					th(style='width:150px;') LastName
+					th(style='width:150px;') Email
+					th(style='width:150px;') Phone
+					th(style='width:75px;') Zip
+					th(style='width:150px;') Last Transaction
 				tr
 					td Joe
 					td Smith 
+					td 
+						a joe@email.com
+					td 555.555.5555
+					td 54321
+					td
+						i 9/3/2013 12:01 pm
 					td!= partial('customer_actions')
 				tr
 					td Mary
 					td Johnson 
+					td
+						a mary@email.com
+					td 555.555.5555
+					td 12345
+					td
+						i 9/7/2013 3:23 pm
 					td!= partial('customer_actions')					
 				tfoot
-					td 
-						a(id='tooltip',data-original-title='Add Customer',href='',onclick='return false;') 
+					td(colspan='7',style='padding-top:25px;') 
+						a(onclick='return false;') 
 							i(class='icon-plus')
-					td
-					td
+							span(style='font-size:12px;margin-left:10px;font-weight:bold;') Add Customer
 
 		#receipt(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 425px;')
 			.modal-header(style='height:30px;')
