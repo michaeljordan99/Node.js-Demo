@@ -29,12 +29,11 @@ a:hover {
 }
 
 select {
-  vertical-align: top !important;
-  margin: 0 10px 0 10px !important;
+  vertical-align: top;
 }
 
 option {
-  padding: 5px;
+  padding: 2px;
 }
 
 #container {
@@ -254,7 +253,16 @@ th.description {
   color: #282829;
 }
 
+/* Nav */
 .nav-pills > li > a:hover {
   background-color: #A2AFBD  !important;
 }
 
+/* Form */
+.form-horizontal .controls {
+    margin:0 0 10px 120px;
+}
+
+.form-horizontal .control-label {
+    width: 100px;
+}

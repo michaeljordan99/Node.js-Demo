@@ -1,7 +1,37 @@
-#addCustomer(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 425px;')
+#addCustomer(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 500px;')
 	.modal-header(style='height:30px;')
 		button(type='button', class='close', data-dismiss='modal') X
 		b Add Customer
 	.modal-body
-		#receiptInner(style='border:1px solid gray;padding:10px;margin-bottom:10px;width:90%;')
-			Name
+		form.form-horizontal
+			.control-group
+				label.control-label(for='firstName') First Name
+				.controls
+					input.input-large(type='text',id='firstName')
+				label.control-label(for='lastName') Last Name
+				.controls
+					input.input-large(type='text',id='lastName')
+				label.control-label(for='address') Address
+				.controls
+					input.input-xlarge(type='text',id='address')
+				label.control-label(for='address2') Address2
+				.controls
+					input.input-xlarge(type='text',id='address2')					
+				label.control-label(for='city') City
+				.controls
+					input.input-small(type='text',id='city')	
+				label.control-label(for='state') State
+				.controls
+					!= partial('partials/state_dropdown')
+				label.control-label(for='zip') Zip
+				.controls
+					input.input-small(type='text',id='zip')	
+				label.control-label(for='email') Email
+				.controls
+					input.input-large(type='text',id='email')
+				label.control-label(for='phone') Phone
+				.controls
+					input.input-medium(type='text',id='phone')	
+
+			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 120px;width:80px;') Save		
+			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 50px;width:80px;',data-dismiss='modal') Cancel																	
