@@ -7,10 +7,10 @@
 			.control-group
 				label.control-label(for='firstName') First Name
 				.controls
-					input.input-large(type='text',id='firstName')
+					input.input-large(type='text',id='firstName',ng-model='customer.firstName')
 				label.control-label(for='lastName') Last Name
 				.controls
-					input.input-large(type='text',id='lastName')
+					input.input-large(type='text',id='lastName',ng-model='customer.lastName')
 				label.control-label(for='address') Address
 				.controls
 					input.input-xlarge(type='text',id='address')
@@ -25,13 +25,13 @@
 					!= partial('partials/state_dropdown')
 				label.control-label(for='zip') Zip
 				.controls
-					input.input-small(type='text',id='zip')	
+					input.input-small(type='text',id='zip',ng-model='customer.zip')	
 				label.control-label(for='email') Email
 				.controls
-					input.input-large(type='text',id='email')
+					input.input-large(type='text',id='email',ng-model='customer.email')
 				label.control-label(for='phone') Phone
 				.controls
-					input.input-medium(type='text',id='phone')	
+					input.input-medium(type='text',id='phone',ng-model='customer.phone')	
 
-			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 120px;width:80px;',ng-click="addCustomer()") Save		
+			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 120px;width:80px;',ng-click="addCustomer(customer)") Save		
 			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 50px;width:80px;',data-dismiss='modal') Cancel																	

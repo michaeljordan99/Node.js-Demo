@@ -21,17 +21,17 @@ function CustomerController($scope) {
 	    }	    
     ];
 
-    $scope.addCustomer = function(){
+    $scope.addCustomer = function(customer){
 
 		$("#addCustomerModal").modal('hide');
     	
     	var customer = {	
-	    	"customerRef":"1",
-	    	"firstName":"Michael",
-	    	"lastName":"Jordan",
-	        "email": "Michael@email.com",
-	        "phone":"555.555.5555",
-	        "zip":"12345",
+	    	"customerRef":"9999999",
+	    	"firstName":customer.firstName,
+	    	"lastName":customer.lastName,
+	        "email":customer.email,
+	        "phone":customer.phone,
+	        "zip":customer.zip,
 	        "lastTransaction":"9/1/2013 3:23 pm"
 	    };  
 
