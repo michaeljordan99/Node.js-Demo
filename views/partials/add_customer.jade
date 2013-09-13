@@ -1,4 +1,4 @@
-#addCustomer(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 500px;')
+#addCustomerModal(class='modal hide fade',tabindex='-1', role='dialog', aria-hidden='true', style='width: 500px;')
 	.modal-header(style='height:30px;')
 		button(type='button', class='close', data-dismiss='modal') X
 		b Add Customer
@@ -33,5 +33,5 @@
 				.controls
 					input.input-medium(type='text',id='phone')	
 
-			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 120px;width:80px;') Save		
+			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 120px;width:80px;',ng-click="addCustomer()") Save		
 			button#saveCustomer.btn.btn-primary(style='margin:0 0 0 50px;width:80px;',data-dismiss='modal') Cancel																	

@@ -118,7 +118,7 @@ footer {
 .sub-content{
   border: 1px dotted #CACACC;
   color: #555557;
-  margin: 30px 0 50px 10px;
+  margin: 30px 0 100px 10px;
   padding: 10px;
 }
 
@@ -231,23 +231,6 @@ th.description {
   width: 60%;
 }
 
-.code-example-inner {
-  background: none repeat scroll 0 0 #F8F8F8;
-  overflow-x: auto;
-}
-
-.snippet {
-  color: #2E363B;
-}
-
-.s1 {
-  margin: 0 0 0 50px;
-}
-
-.s2 {
-  margin: 0 0 0 100px;
-}
-
 /* Modal */
 .modal-header {
   color: #282829;
@@ -265,4 +248,40 @@ th.description {
 
 .form-horizontal .control-label {
     width: 100px;
+}
+
+/* Prettyprint for Code Snippets */
+pre.prettyprint.linenums {
+    box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
+}
+
+pre.prettyprint {
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    padding: 8px;
+}
+
+ol.linenums {
+    margin: 0 0 0 33px;
+}
+
+ol.linenums li {
+    color: #BEBEC5;
+    font-size: 12px;
+    line-height: 18px;
+    list-style-type: decimal !important;
+    padding-left: 12px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.code {
+  color: #054F80;
+}
+
+.tab1 {
+  margin: 0 0 0 50px;
+}
+
+.tab2 {
+  margin: 0 0 0 100px;
 }

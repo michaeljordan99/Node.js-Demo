@@ -59,7 +59,7 @@ $(function () {
     });
 
     $("#addCustomerButton").on("click", function () {
-        $("#addCustomer").modal();
+        $("#addCustomerModal").modal();
     });
 
 });

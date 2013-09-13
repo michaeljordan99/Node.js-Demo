@@ -73,72 +73,78 @@
 						and pass it into EasyIntegrator.processTransaction.
 				.code-example 
 					h5 Code Example
-					.code-example-inner
-						|//Create JSON object to pass to EasyIntegrator.
-						.snippet
-							|var request = {
-							.s1 "merchantName": "...",
-							.s1 "merchantKey": "...",
-							.s1 "configurationId": "...",
-							.s1 "transactionType": "CreditSale",
-							.s1 "transFields": { 
-							.s2 "amountTotal": "74.98" 
-							.s1 }
-							|}
-						br
-						|//Pass request JSON object to the EasyIntegrator processTransaction method.
-						.snippet
-							|EasyIntegrator.processTransaction(request)	
-							.s1 .success(function (resultsFields) {	
-							.s2 var transactionId = resultsFields.uniqueTransId;
-							.s1 })
-							.s1 .error(function (errorMessage) {
-							.s2 alert(errorMessage);
-							.s1 })
-							.s1 .done(function () {
-							.s1 });		
-		h4(id='customers') Customer Transactions
-		.sub-content
+					pre.prettyprint.linenums
+						ol.linenums
+							li.L0
+								span.code var request = {
+							li.L1
+								span.code.tab1 "merchantName": "BobsRibs1",	
+							li.L2
+								span.code.tab1 "merchantKey": "A3gziLB98002",
+							li.L3
+								span.code.tab1 "configurationId": "198e84701abc28da",
+							li.L4
+								span.code.tab1 "transactionType": "CreditSale",
+							li.L5
+								span.code.tab1 "transFields": { 
+							li.L6
+								span.code.tab2 "amountTotal": 74.98 
+							li.L7
+								span.code.tab1 }
+							li.L8
+								span.code };
+							li.L9
+							li.L10
+								span.code EasyIntegrator.processTransaction(request)	
+							li.L11
+								span.code.tab1 .success(function (resultsFields) {
+							li.L12
+								span.code.tab2 var transactionId = resultsFields.uniqueTransId;
+							li.L13
+								span.code.tab1  })
+							li.L14
+								span.code.tab1 .error(function (errorMessage) {
+							li.L15
+								span.code.tab2 alert(errorMessage);	
+							li.L16
+								span.code.tab1 })
+							li.L17
+								span.code.tab1 .done(function () {
+							li.L18
+								span.code.tab1 });
+
+		h4(id='customers') How To Process Customer Transactions
+		.sub-content(ng-controller='CustomerController')
 			table.table.table-hover
 				thead
-					th(style='width:125px;') Cust Ref
+					th(style='width:100px;') Cust Ref
 					th(style='width:125px;') First Name
 					th(style='width:125px;') LastName
 					th(style='width:150px;') Email
-					th(style='width:150px;') Phone
+					th(style='width:125px;') Phone
 					th(style='width:50px;') Zip
 					th(style='width:150px;') Last Transaction
-				tr
-					td 298402
-					td Joe
-					td Smith 
+				tr(ng-repeat='customer in customers')
+					td {{customer.customerRef}}
+					td {{customer.firstName}}
+					td {{customer.lastName}} 
 					td 
-						a joe@email.com
-					td 555.555.5555
-					td 54321
+						a {{customer.email}}
+					td {{customer.phone}}
+					td {{customer.zip}}
 					td
-						i 9/3/2013 12:01 pm
+						i {{customer.lastTransaction}}
 					td!= partial('partials/customer_actions')
-				tr
-					td 9179035
-					td Mary
-					td Johnson 
-					td
-						a mary@email.com
-					td 555.555.5555
-					td 12345
-					td
-						i 9/7/2013 3:23 pm
-					td!= partial('partials/customer_actions')					
 				tfoot
 					td(colspan='8',style='padding-top:25px;') 
 						a(id='addCustomerButton') 
 							i(class='icon-plus')
-							span(style='font-size:12px;margin-left:10px;font-weight:bold;') Add Customer
+							span(style='font-size:12px;margin-left:10px;font-weight:bold;') Add Customer	
+
+			!= partial('partials/add_customer')				
 
 //Modal Receipt
 != partial('partials/receipt')
-!= partial('partials/add_customer')
 
 #rightContent
 	ul
